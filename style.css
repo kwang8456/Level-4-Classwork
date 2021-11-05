@@ -1,0 +1,20 @@
+body {
+    font: bold 18pt calibri;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+div {
+    border: thick double black;
+}
+
+button {
+    font: 16pt arial;
+}
+
+textarea {
+    width: 50%;
+}
