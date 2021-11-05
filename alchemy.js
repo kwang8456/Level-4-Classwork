@@ -76,9 +76,9 @@ function areParents (organism, parent1, parent2)
 
 function areParents (organism, parent1, parent2)
 {
-    console.log (getOrganismData (organism, PARENT_1));
-    console.log (parent1);
-    console.log (getOrganismData (parent1, NAME));
+    //console.log (getOrganismData (organism, PARENT_1));
+    //console.log (parent1);
+    //console.log (getOrganismData (parent1, NAME));
     //console.log (((getOrganismData (organism, PARENT_1) == getOrganismData (parent1, NAME) || getOrganismData (organism, PARENT_1) == getOrganismData (parent2, NAME)) && (getOrganismData (organism, PARENT_2) == getOrganismData (parent1, NAME) || getOrganismData (organism, PARENT_2) == getOrganismData (parent2, NAME))));
     return ((getOrganismData (organism, PARENT_1) == getOrganismData (parent1, NAME) || getOrganismData (organism, PARENT_1) == getOrganismData (parent2, NAME)) && (getOrganismData (organism, PARENT_2) == getOrganismData (parent1, NAME) || getOrganismData (organism, PARENT_2) == getOrganismData (parent2, NAME)))
 }
@@ -147,8 +147,9 @@ function deleteOrganism ()
     var idx = parseInt (organismForm.orgsel.value) - 1;
 
     if (idx < ORGANISM_OFFSET || idx >= myOrganisms.length)
+    {
         return;
-
+    }
     myOrganisms.splice (idx, 1);
 
     organismForm.orgsel.value = "";
