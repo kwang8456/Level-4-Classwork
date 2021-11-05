@@ -145,14 +145,20 @@ function addNewOrganism ()
 function deleteOrganism ()
 {
     var idx = parseInt (organismForm.orgsel.value) - 1;
-
+    //console.log (idx);
+    if (idx >= ORGANISM_OFFSET && idx <= myOrganisms.length)
+    {
+        myOrganisms.splice (idx, 1);
+        organismForm.orgsel.value = "";
+    }
+    /*
     if (idx < ORGANISM_OFFSET || idx >= myOrganisms.length)
     {
         return;
     }
     myOrganisms.splice (idx, 1);
-
     organismForm.orgsel.value = "";
+    */
     display ();
 }
 
@@ -165,4 +171,5 @@ function display ()
         firstSelectionOutput.innerHTML = getOrganismData (firstSelection, NAME);
         secondSelectionOutput.innerHTML = getOrganismData (secondSelection, NAME); 
     }
+    console.log (myOrganisms.length);
 }
